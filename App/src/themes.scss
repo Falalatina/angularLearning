@@ -1,0 +1,116 @@
+@use "@angular/material" as mat;
+@include mat.core();
+$primary: (
+  50: #f6f4fa,
+  100: #e9e5f3,
+  200: #dad3eb,
+  300: #cbc1e2,
+  400: #bfb4dc,
+  500: #b4a7d6,
+  600: #ad9fd1,
+  700: #a496cc,
+  800: #9c8cc6,
+  900: #8c7cbc,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #e4dbff,
+  A700: #d2c2ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$accent: (
+  50: #f9e4fa,
+  100: #efbdf2,
+  200: #e591ea,
+  300: #da64e2,
+  400: #d243db,
+  500: #ca22d5,
+  600: #c51ed0,
+  700: #bd19ca,
+  800: #b714c4,
+  900: #ab0cba,
+  A100: #fde6ff,
+  A200: #f8b3ff,
+  A400: #f380ff,
+  A700: #f067ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$warn: (
+  50: #fae4ed,
+  100: #f2bdd3,
+  200: #ea91b5,
+  300: #e26497,
+  400: #db4381,
+  500: #d5226b,
+  600: #d01e63,
+  700: #ca1958,
+  800: #c4144e,
+  900: #ba0c3c,
+  A100: #ffe6ec,
+  A200: #ffb3c5,
+  A400: #ff809e,
+  A700: #ff678a,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$primary-palette: mat.define-palette($primary);
+$accent-palette: mat.define-palette($accent);
+$warn-palette: mat.define-palette($warn);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary-palette,
+      accent: $accent-palette,
+      warn: $warn-palette,
+    ),
+  )
+);
+
+@include mat.all-component-colors($light-theme);
