@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-todoform',
@@ -9,9 +9,11 @@ import { Component } from '@angular/core';
 })
 export class TodoformComponent {
   todo: any[] = [{ date: '2024-06-05', todo: 'ss' }];
+
   fPrint(val: object) {
+    val = { ...val, isChecked: false };
     console.log(val);
     this.todo.push(val);
-    console.log(this.todo);
+    console.log('a');
   }
 }

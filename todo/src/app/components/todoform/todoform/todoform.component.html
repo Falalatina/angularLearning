@@ -9,10 +9,13 @@
 
   @for (todo of todo; track $index) {
 
-  <div class="task">
+  <div
+    class="task"
+    [style.text-decoration]="todo.isChecked ? 'line-through black' : 'none'"
+  >
     <div>{{ todo.date }}</div>
     <div>{{ todo.todo }}</div>
-    <input type="checkbox" />
+    <input type="checkbox" (click)="todo.isChecked = true" />
   </div>
 
   }
