@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-todoform',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './todoform.component.html',
   styleUrl: './todoform.component.scss',
 })

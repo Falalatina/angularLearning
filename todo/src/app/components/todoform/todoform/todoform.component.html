@@ -10,12 +10,13 @@
   @for (todo of todo; track $index) {
 
   <div
+    [class.a]="todo.isChecked"
     class="task"
     [style.text-decoration]="todo.isChecked ? 'line-through black' : 'none'"
   >
     <div>{{ todo.date }}</div>
     <div>{{ todo.todo }}</div>
-    <input type="checkbox" (click)="todo.isChecked = true" />
+    <input [(ngModel)]="todo.isChecked" type="checkbox" />
   </div>
 
   }
