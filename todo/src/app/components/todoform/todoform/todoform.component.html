@@ -1,7 +1,19 @@
-<form (submit)="print()">
-  <label for="fname">To do</label><br />
-  <input type="text" id="fname" name="fname" /><br />
-  <label for="fname">Deadline</label><br />
-  <input type="date" />
-  <button type="submit">Click</button>
-</form>
+<ng-container>
+  <label for="do">To do</label><br />
+  <input type="text" id="do" name="do" #do /><br />
+  <label for="date">Deadline</label><br />
+  <input type="date" id="date" name="date" #date />
+  <button type="submit" (click)="fPrint({ date: date.value, todo: do.value })">
+    Click
+  </button>
+
+  @for (todo of todo; track $index) {
+
+  <div class="task">
+    <div>{{ todo.date }}</div>
+    <div>{{ todo.todo }}</div>
+    <input type="checkbox" />
+  </div>
+
+  }
+</ng-container>
