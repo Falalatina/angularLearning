@@ -15,6 +15,10 @@ export class TodoformComponent {
     val = { ...val, isChecked: false };
     console.log(val);
     this.todo.push(val);
-    console.log('a');
+    console.log(this.todo[0]);
+  }
+
+  fDelete(index: any) {
+    this.todo = this.todo.filter((i) => i != this.todo[index]);
   }
 }

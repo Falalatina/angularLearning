@@ -17,6 +17,7 @@
     <div>{{ todo.date }}</div>
     <div>{{ todo.todo }}</div>
     <input [(ngModel)]="todo.isChecked" type="checkbox" />
+    <button (click)="fDelete($index)">Delete</button>
   </div>
 
   }
