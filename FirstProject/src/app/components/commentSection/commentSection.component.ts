@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './commentSection.component.scss',
 })
 export class commentSection {
-  users = ['user1', 'user2', 'ser3'];
-  message = ['hi', 'papa', 'uwu'];
+  data = require('./data.js');
+  users = this.data.users;
+  message = this.data.message;
   iteration = 0;
   container: string[] = [];
   empty = ['Sorry there is no more comments :<'];
   showComment() {
     this.iteration++;
-    if (this.iteration <= this.users.length + 1) {
+    if (this.iteration <= this.users.length) {
       this.container.push('');
     }
   }

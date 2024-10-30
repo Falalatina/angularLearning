@@ -6,8 +6,8 @@
     <h3>{{ users[$index] }}</h3>
     <p>{{ message[$index] }}</p>
   </div>
-  @if ($index >= this.users.length) {
-  <p>{{ empty }}</p>
+  @if ($index >= this.users.length + 1) {
+  <p class="error">{{ empty }}</p>
 
   } }
 </div>
