@@ -1,5 +1,5 @@
 <div class="container">
-  <button class="my-btn" (click)="showComment()">Show comment</button>
+  <button class="my-btn shrink" (click)="showComment()">Show comment</button>
   @for (comments of container; track comments) { @if ($index < this.users.length
   ){
   <div class="comment">
@@ -7,7 +7,7 @@
     <p>{{ message[$index] }}</p>
   </div>
   } @else {
-  <p class="error">{{ empty }}</p>
+  <p class="error text-3 underline">{{ empty }}</p>
 
   } }
 </div>
