@@ -3,8 +3,8 @@
   @for (comments of container; track comments) {
 
   <div>
-    <h3>{{ users[$index % users.length] }}</h3>
-    <p>{{ message[$index % users.length] }}</p>
+    <h3>{{ users[$index] }}</h3>
+    <p>{{ message[$index] }}</p>
   </div>
   }
 </div>
