@@ -1,10 +1,13 @@
-<div>
-  <button (click)="showComment()">Show comment</button>
+<div class="container">
+  <button class="my-btn" (click)="showComment()">Show comment</button>
   @for (comments of container; track comments) {
 
-  <div>
+  <div class="comment">
     <h3>{{ users[$index] }}</h3>
     <p>{{ message[$index] }}</p>
   </div>
-  }
+  @if ($index >= this.users.length) {
+  <p>{{ empty }}</p>
+
+  } }
 </div>
