@@ -3,8 +3,8 @@
   @for (comments of container; track comments) { @if ($index < this.users.length
   ){
   <div class="comment">
-    <h3 class="font-bold">{{ users[$index] }}</h3>
-    <p>{{ message[$index] }}</p>
+    <h3 class="font-bold">{{ users[$index].username }}</h3>
+    <p>{{ users[$index].message }}</p>
   </div>
   } @else {
   <p class="error text-3 underline">{{ empty }}</p>

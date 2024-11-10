@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { users, message } from './data';
+import { CommentService } from '../../services/comment.service';
 
 @Component({
   standalone: true,
@@ -9,12 +9,16 @@ import { users, message } from './data';
   styleUrl: './commentSection.component.scss',
 })
 export class commentSection {
-  users = users;
-  message = message;
+  constructor(private commentService: CommentService) {
+    this.users = this.commentService.userComments;
+  }
+  users;
+
   iteration = 0;
   container: string[] = [];
   empty = ['Sorry there is no more comments :<'];
   showComment() {
+    console.log(this.users);
     this.iteration++;
     if (this.iteration <= this.users.length + 1) {
       this.container.push('');
