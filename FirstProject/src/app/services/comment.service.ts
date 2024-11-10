@@ -22,7 +22,7 @@ export class CommentService {
       message: 'papa',
     },
     {
-      userId: 3,
+      userId: 2,
       username: 'ser3',
       message: 'hi',
     },
