@@ -1,15 +1,43 @@
 <div class="container">
   <div class="create-comment-container">
     <div
-      class="bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 p-5 rounded-lg border-cyan-300 border"
+      class="bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 p-5 rounded-lg border-cyan-300 border-b-8"
     >
       <div>
         <p class="text-white">Create comment</p>
-        <input class="m-1" placeholder="ID" />
-        <input class="m-1" placeholder="Nickname" />
+        <input
+          class="m-1 rounded-md h-10 p-1"
+          placeholder="ID"
+          id="idUser"
+          [(ngModel)]="idUser"
+        />
+        <input
+          class="m-1 rounded-md h-10 p-1"
+          placeholder="Nickname"
+          id="userName"
+          [(ngModel)]="userName"
+        />
       </div>
       <p class="text-white">Message</p>
-      <textarea class="new-comment" type="text"></textarea>
+      <textarea
+        class="new-comment rounded-md p-1"
+        type="text"
+        id="newComment"
+        [(ngModel)]="newComment"
+      ></textarea>
+      <button
+        class="text-white"
+        type="button"
+        (click)="
+          addComment({
+            userId: idUser,
+            username: userName,
+            message: newComment
+          })
+        "
+      >
+        Submit
+      </button>
     </div>
   </div>
   <button class="my-btn shrink" (click)="showComment()">Show comment</button>
@@ -20,7 +48,7 @@
     <p>{{ users[$index].message }}</p>
   </div>
   } @else {
-  <p class="error text-3 underline">{{ empty }}</p>
+  <p class="error text-3 underline mb-10">{{ empty }}</p>
 
   } }
 </div>
