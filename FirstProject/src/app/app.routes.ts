@@ -1,9 +1,17 @@
 import { Routes } from '@angular/router';
-import { commentSection } from './components/commentSection/commentSection.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: commentSection,
+    redirectTo: 'comments',
+    pathMatch: 'full',
+  },
+  {
+    path: 'comments',
+
+    loadComponent: () =>
+      import('./components/commentSection/commentSection.component').then(
+        (m) => m.commentSection
+      ),
   },
 ];

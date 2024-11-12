@@ -29,3 +29,17 @@
   color: aqua;
   font-weight: bold;
 }
+
+.create-comment-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  padding: 1rem;
+}
+
+.new-comment {
+  width: 100%;
+  height: 100px;
+  overflow-x: auto;
+}

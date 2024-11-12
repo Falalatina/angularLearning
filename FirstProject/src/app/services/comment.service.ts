@@ -27,4 +27,8 @@ export class CommentService {
       message: 'hi',
     },
   ];
+
+  addComment(newComment: comment) {
+    this.userComments.push(newComment);
+  }
 }

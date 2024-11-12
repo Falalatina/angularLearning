@@ -1,4 +1,17 @@
 <div class="container">
+  <div class="create-comment-container">
+    <div
+      class="bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 p-5 rounded-lg border-cyan-300 border"
+    >
+      <div>
+        <p class="text-white">Create comment</p>
+        <input class="m-1" placeholder="ID" />
+        <input class="m-1" placeholder="Nickname" />
+      </div>
+      <p class="text-white">Message</p>
+      <textarea class="new-comment" type="text"></textarea>
+    </div>
+  </div>
   <button class="my-btn shrink" (click)="showComment()">Show comment</button>
   @for (comments of container; track comments) { @if ($index < this.users.length
   ){
