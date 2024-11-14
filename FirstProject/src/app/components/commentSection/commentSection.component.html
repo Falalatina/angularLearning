@@ -29,7 +29,7 @@
         class="text-white"
         type="button"
         (click)="
-          addComment({
+          commentService.addComment({
             userId: idUser,
             username: userName,
             message: newComment
