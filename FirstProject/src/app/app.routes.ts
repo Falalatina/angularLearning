@@ -14,4 +14,12 @@ export const routes: Routes = [
         (m) => m.commentSection
       ),
   },
+  {
+    path: 'logic',
+
+    loadComponent: () =>
+      import('./components/python-logic/python-logic.component').then(
+        (m) => m.PythonLogicComponent
+      ),
+  },
 ];
