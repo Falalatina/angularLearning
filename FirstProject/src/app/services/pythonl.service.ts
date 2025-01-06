@@ -16,6 +16,8 @@ export class pythonLogicService {
     await this.pyodide.loadPackage('nltk');
     await this.pyodide.loadPackage('Numpy');
     await this.pyodide.loadPackage('click');
+    await this.pyodide.loadPackage('more-itertools');
+    await this.pyodide.loadPackage('PyGraph');
   };
 
   constructor() {

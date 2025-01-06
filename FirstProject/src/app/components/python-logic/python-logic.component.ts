@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { pythonLogicService } from '../../services/pythonl.service';
-import codeAlgorithm from './code';
+//import { codeAlgorithm } from './code.py?raw';
 
 @Component({
   selector: 'python-logic',
@@ -16,7 +16,15 @@ export class PythonLogicComponent {
     this.pythonService.pyodide.runPython(a);
   };
 
-  printF = codeAlgorithm;
+  text = '';
+
+  read = fetch('./code.py')
+    .then((response) => response.text())
+    .then((data) => {
+      this.text = data;
+    });
+
+  runPythonCode = this.text;
 
   logMe() {
     console.log(this.pythonService.pyodide.runPython);
