@@ -17,8 +17,11 @@ export class pythonLogicService {
     await this.pyodide.loadPackage('Numpy');
     await this.pyodide.loadPackage('click');
     await this.pyodide.loadPackage('more-itertools');
-    await this.pyodide.loadPackage('PyGraph');
+    /* @vite-ignore */
+    await this.pyodide.loadPackage('/PyGraph-0.3.0-py3-none-any.whl');
   };
+
+  //../python-logic/PyGraph-0.3.0-py3-none-any.whl
 
   constructor() {
     this.getPy();

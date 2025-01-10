@@ -16,15 +16,13 @@ export class PythonLogicComponent {
     this.pythonService.pyodide.runPython(a);
   };
 
-  text = '';
+  runPythonCode = '';
 
   read = fetch('./code.py')
     .then((response) => response.text())
     .then((data) => {
-      this.text = data;
+      this.runPythonCode = data;
     });
-
-  runPythonCode = this.text;
 
   logMe() {
     console.log(this.pythonService.pyodide.runPython);
